@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Design Tokens - B'SAHA Visual Identity */
+  --color-background: #FAF7F2;      /* Crème ivoire chaud */
+  --color-surface: #FFFFFF;         /* Blanc pur doux */
+  --color-surface-warm: #F4ECE4;    /* Beige pâtisserie réconfortant */
+  --color-cream: #EDE4D8;           /* Crème fouettée naturelle */
+  --color-chocolate: #2B1810;       /* Cacao noir profond */
+  --color-chocolate-light: #4A3328; /* Cacao au lait équilibré */
+  --color-caramel: #B86B35;         /* Caramel beurre salé doré */
+  --color-accent: #C95D3B;          /* Terracotta chaud velouté */
+  --color-accent-hover: #B04B2B;    /* Terracotta intense */
+  --color-honey: #E5A84B;           /* Safran doré & miel chaud */
+  --color-text: #2B1810;            /* Texte principal brun profond */
+  --color-muted: #7E6C63;           /* Texte secondaire noisette */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-cream);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-caramel);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

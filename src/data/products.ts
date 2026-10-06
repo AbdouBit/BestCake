@@ -1,0 +1,225 @@
+import { Product, CategoryInfo } from '../types/product';
+
+export const CATEGORIES: CategoryInfo[] = [
+  {
+    id: 'cookies',
+    title: 'Cookies',
+    subtitle: 'Généreux, fondants, chocolatés',
+    description: 'Une croûte délicatement caramélisée, un cœur intensément fondant et des morceaux de chocolats nobles taillés à la main.',
+    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80',
+    itemCount: 4
+  },
+  {
+    id: 'muffins',
+    title: 'Muffins',
+    subtitle: 'Moelleux et ultra-gourmands',
+    description: 'Le dôme doré parfait, une texture alvéolée ultra-moelleuse et un cœur garni qui fond à chaque bouchée.',
+    image: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=800&q=80',
+    itemCount: 4
+  },
+  {
+    id: 'cakes',
+    title: 'Cakes',
+    subtitle: 'À partager, pour les petits & grands moments',
+    description: 'Des cakes tranchés généreusement, parfumés aux zestes naturels, au cacao pur ou à la pistache grillée.',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
+    itemCount: 4
+  }
+];
+
+export const PRODUCTS: Product[] = [
+  // --- COOKIES ---
+  {
+    id: 'cookie-chocolat',
+    slug: 'cookie-chocolat',
+    name: 'Cookie Chocolat Intense',
+    category: 'cookies',
+    price: 3.50,
+    description: 'Pépites de chocolat noir 70% et lait, fleur de sel de Guérande.',
+    longDescription: 'Notre grand classique qui a fait la réputation de notre atelier : une pâte pétrie au beurre frais, généreusement truffée de pépites de grand cru de chocolat noir et au lait, rehaussée d\'une pointe de fleur de sel.',
+    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé française', 'Beurre doux AOP', 'Chocolat noir 70%', 'Chocolat au lait', 'Sucre de canne blond', 'Œufs frais plein air', 'Fleur de sel'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Traces possibles de fruits à coque'],
+    badge: 'Coup de cœur',
+    featured: true,
+    available: true,
+    preparationTime: 'Cuit le matin même'
+  },
+  {
+    id: 'cookie-triple-chocolat',
+    slug: 'cookie-triple-chocolat',
+    name: 'Cookie Triple Chocolat',
+    category: 'cookies',
+    price: 3.80,
+    description: 'Pâte cacao intense, pépites noir, lait et éclats de chocolat blanc crémeux.',
+    longDescription: 'L\'expérience ultime pour les fondus de cacao. Une pâte sablée au cacao pur hollandais, garnie de trois types de chocolat qui fondent en bouche à différentes températures.',
+    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé', 'Beurre frais', 'Cacao pur Valrhona', 'Chocolat blanc', 'Chocolat au lait', 'Chocolat noir', 'Sucre roux', 'Œufs frais'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Soja (lécithine)'],
+    badge: 'Best-seller',
+    featured: true,
+    available: true,
+    preparationTime: 'Cuit le matin même'
+  },
+  {
+    id: 'cookie-kinder',
+    slug: 'cookie-kinder',
+    name: 'Cookie Kinder Gourmand',
+    category: 'cookies',
+    price: 4.00,
+    description: 'Cœur coulant chocolat-noisette et généreux morceaux de Kinder Bueno.',
+    longDescription: 'La régression absolue : un biscuit beurré ultra-moelleux surmonté de brisures croustillantes de Kinder Bueno et fourré à la crème onctueuse de noisettes.',
+    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé', 'Beurre de baratte', 'Barres Kinder Bueno', 'Pâte à tartiner noisette', 'Sucre roux', 'Œufs frais de ferme'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Noisettes', 'Soja'],
+    badge: 'Ultra gourmand',
+    featured: true,
+    available: true,
+    preparationTime: 'Cuit le matin même'
+  },
+  {
+    id: 'cookie-pistache',
+    slug: 'cookie-pistache',
+    name: 'Cookie Pistache & Chocolat Blanc',
+    category: 'cookies',
+    price: 4.20,
+    description: 'Praliné pistache maison, pistaches d\'Iran torréfiées et chocolat ivoire.',
+    longDescription: 'Une création raffinée : notre pâte signature sublimée par un pur praliné de pistache non sucré, des pistaches entières concassées au couteau et la douceur soyeuse du chocolat blanc.',
+    image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de froment', 'Beurre doux', 'Pistaches torréfiées', 'Chocolat blanc', 'Pâte de pistache 100%', 'Sucre de canne', 'Œufs'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Fruits à coque (pistaches)'],
+    badge: 'Signature',
+    featured: false,
+    available: true,
+    preparationTime: 'Cuit le matin même'
+  },
+
+  // --- MUFFINS ---
+  {
+    id: 'muffin-chocolat',
+    slug: 'muffin-chocolat',
+    name: 'Muffin Cœur Coulant Chocolat',
+    category: 'muffins',
+    price: 4.00,
+    description: 'Dôme bien bombé au chocolat noir avec un insert fondant coulant.',
+    longDescription: 'Un muffin aérien et profond en chocolat, doté d\'une texture ultra-tendre. Quand on l\'ouvre, un flot de ganache onctueuse au chocolat noir se libère délicieusement.',
+    image: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé', 'Cacao extra brut', 'Chocolat noir 66%', 'Crème fraîche', 'Huile neutre', 'Œufs', 'Sucre semoule'],
+    allergens: ['Gluten', 'Lait', 'Œufs'],
+    badge: 'Incontournable',
+    featured: true,
+    available: true,
+    preparationTime: 'Fraîchement enfourné'
+  },
+  {
+    id: 'muffin-kinder',
+    slug: 'muffin-kinder',
+    name: 'Muffin Maxi Kinder',
+    category: 'muffins',
+    price: 4.50,
+    description: 'Pâte vanillée moelleuse, morceaux de Kinder Maxi et cœur lacté.',
+    longDescription: 'Le goûter réconfortant par excellence. Une base très moelleuse infusée à la vanille, farcie d\'un cœur lacté fondant et de morceaux généreux de chocolat Kinder.',
+    image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé', 'Sucre blond', 'Barres Kinder Maxi', 'Lait entier', 'Beurre', 'Extrait pur de vanille', 'Œufs'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Soja'],
+    badge: 'Gourmandise',
+    featured: false,
+    available: true,
+    preparationTime: 'Fraîchement enfourné'
+  },
+  {
+    id: 'muffin-myrtille',
+    slug: 'muffin-myrtille',
+    name: 'Muffin Sauvage Myrtilles',
+    category: 'muffins',
+    price: 3.90,
+    description: 'Myrtilles entières compotées au four et crumble croustillant au sucre brun.',
+    longDescription: 'Gorgé de véritables myrtilles sauvages qui éclatent à la cuisson, offrant une acidité fruitée irrésistible sous un chapeau de crumble croquant.',
+    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Myrtilles sauvages', 'Farine de froment', 'Beurre demi-sel', 'Sucre cassonade', 'Lait ribot fermenté', 'Œufs bio'],
+    allergens: ['Gluten', 'Lait', 'Œufs'],
+    featured: true,
+    available: true,
+    preparationTime: 'Fraîchement enfourné'
+  },
+  {
+    id: 'muffin-vanille',
+    slug: 'muffin-vanille',
+    name: 'Muffin Vanille Bourbon',
+    category: 'muffins',
+    price: 3.80,
+    description: 'Infusion de gousses de vanille de Madagascar, cœur crème diplomate.',
+    longDescription: 'Une ode à la véritable vanille : des petits grains noirs parfumés parsèment une mie incroyablement aérée avec une douceur beurrée réconfortante.',
+    image: 'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé', 'Gousses de vanille de Madagascar', 'Beurre doux', 'Sucre fin', 'Lait frais', 'Œufs'],
+    allergens: ['Gluten', 'Lait', 'Œufs'],
+    featured: false,
+    available: true,
+    preparationTime: 'Fraîchement enfourné'
+  },
+
+  // --- CAKES ---
+  {
+    id: 'cake-chocolat',
+    slug: 'cake-chocolat',
+    name: 'Cake Fondant au Chocolat Noir',
+    category: 'cakes',
+    price: 15.00,
+    description: 'Format familial (6-8 pers). Texture dense, ganache miroir au chocolat.',
+    longDescription: 'Un gâteau de voyage riche et fondant, préparé avec 60% de pâte de cacao. Recouvert d\'un glaçage croquant au chocolat et éclats d\'amandes effilées.',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Chocolat noir 70%', 'Beurre fin', 'Farine T55', 'Œufs frais', 'Sucre de canne', 'Amandes effilées grillées'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Amandes'],
+    badge: 'Grand Format',
+    featured: true,
+    available: true,
+    preparationTime: 'Préparé sur commande'
+  },
+  {
+    id: 'cake-citron',
+    slug: 'cake-citron',
+    name: 'Cake Citron Jaune & Pavot',
+    category: 'cakes',
+    price: 14.50,
+    description: 'Format familial (6-8 pers). Zestes frais, sirop de punchage au jus de citron.',
+    longDescription: 'Le cake soleil par excellence. Imbibé à la sortie du four d\'un sirop au pur jus de citron fraîchement pressé et parsemé de graines de pavot bleu qui crépitent délicatement.',
+    image: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Citrons bio non traités', 'Farine', 'Graines de pavot bleu', 'Beurre frais', 'Sucre glace', 'Œufs de ferme'],
+    allergens: ['Gluten', 'Lait', 'Œufs'],
+    badge: 'Fraîcheur',
+    featured: true,
+    available: true,
+    preparationTime: 'Préparé sur commande'
+  },
+  {
+    id: 'cake-marbre',
+    slug: 'cake-marbre',
+    name: 'Cake Marbré Tradition',
+    category: 'cakes',
+    price: 14.00,
+    description: 'Format familial (6-8 pers). Spirales vanille bourbon et cacao onctueux.',
+    longDescription: 'Le souvenir d\'enfance universel, revisité selon notre savoir-faire maison : un équilibre parfait entre vanille crémeuse et chocolat amer intense avec un rubanage soyeux.',
+    image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine de blé', 'Beurre de Normandie', 'Poudre de cacao', 'Extrait pur de vanille', 'Sucre', 'Œufs'],
+    allergens: ['Gluten', 'Lait', 'Œufs'],
+    featured: false,
+    available: true,
+    preparationTime: 'Préparé sur commande'
+  },
+  {
+    id: 'cake-pistache',
+    slug: 'cake-pistache',
+    name: 'Cake Pistache & Fleur d\'Oranger',
+    category: 'cakes',
+    price: 16.50,
+    description: 'Format familial (6-8 pers). Pâte de pistache pure, subtile touche parfumée.',
+    longDescription: 'Une création signature d\'une délicatesse rare : une mie vert tendre naturelle parfumée à l\'eau florale d\'oranger naturelle, parsemée de pistaches concassées et glacée au sucre parfumé.',
+    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=900&q=85',
+    ingredients: ['Farine', 'Pâte pure de pistache', 'Eau de fleur d\'oranger naturelle', 'Pistaches entières', 'Beurre doux', 'Œufs'],
+    allergens: ['Gluten', 'Lait', 'Œufs', 'Pistaches'],
+    badge: 'Prestige',
+    featured: true,
+    available: true,
+    preparationTime: 'Préparé sur commande'
+  }
+];
