@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu, X } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
-import { BRAND_NAME, NAVIGATION_LINKS } from '../../config/config';
+import { NAVIGATION_LINKS } from '../../config/config';
+import { BrandLogo } from '../ui/BrandLogo';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,21 +28,13 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo Brand Minimaliste & Typographique */}
+          {/* Logo Brand Traiteur Toutou */}
           <a
             href="#"
-            className="group flex flex-col items-start focus:outline-none"
-            aria-label="Accueil B'SAHA"
+            className="focus:outline-none"
+            aria-label="Accueil Traiteur Toutou"
           >
-            <div className="flex items-center gap-1.5">
-              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-chocolate transition-colors group-hover:text-accent">
-                {BRAND_NAME}
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-accent mb-1 transition-transform group-hover:scale-125" />
-            </div>
-            <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-muted/80 -mt-1 hidden sm:block">
-              Maison Gourmande
-            </span>
+            <BrandLogo size="md" />
           </a>
 
           {/* Desktop Navigation */}

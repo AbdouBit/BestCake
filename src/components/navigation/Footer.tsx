@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Phone } from 'lucide-react';
 import { BRAND_NAME, BRAND_TAGLINE, SOCIAL_LINKS, STORE_CONFIG } from '../../config/config';
+import { BrandLogo } from '../ui/BrandLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,17 +11,12 @@ export const Footer: React.FC = () => {
           
           {/* Marque & Signature */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="font-serif text-3xl font-bold tracking-tight text-[#FAF7F2]">
-                {BRAND_NAME}
-              </span>
-              <span className="w-2 h-2 rounded-full bg-accent" />
-            </div>
+            <BrandLogo variant="light" size="lg" />
             <p className="text-sm text-[#FAF7F2]/70 leading-relaxed max-w-sm">
               « {BRAND_TAGLINE} »
             </p>
             <p className="text-xs text-[#FAF7F2]/50">
-              Des pâtisseries réconfortantes, façonnées à la main avec les meilleurs ingrédients et une passion inaltérable.
+              Des créations gastronomiques et douceurs réconfortantes, façonnées avec les meilleurs ingrédients et une passion inaltérable.
             </p>
           </div>
 

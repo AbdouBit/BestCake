@@ -24,7 +24,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onDiscover, onOrderNow
             {/* Petit badge d'accroche */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream/60 border border-chocolate/10 text-xs font-semibold text-chocolate shadow-warm-sm">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
-              <span>Maison de Pâtisserie Artisanale</span>
+              <span>Maison Traiteur & Gastronomie Artisanale</span>
             </div>
 
             {/* Titre Principal de Marque */}
@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onDiscover, onOrderNow
 
             {/* Description d'ambiance */}
             <p className="text-base sm:text-lg text-muted max-w-xl leading-relaxed">
-              Cookies crousti-fondants, muffins ultra-gourmands et cakes familiaux généreux, préparés chaque jour à la main avec les meilleurs ingrédients et une passion inaltérable.
+              Buffets raffinés, douceurs crousti-fondantes, réceptions gourmandes et créations artisanales, préparés chaque jour avec les meilleurs ingrédients et un savoir-faire passionné.
             </p>
 
             {/* Boutons d'actions */}
@@ -88,7 +88,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onDiscover, onOrderNow
               <div className="relative rounded-3xl overflow-hidden shadow-warm-xl border-4 border-surface rotate-1 hover:rotate-0 transition-transform duration-500 bg-cream">
                 <img
                   src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1000&q=85"
-                  alt="Cookie artisanal B'SAHA avec pépites de chocolat fondantes et fleur de sel"
+                  alt="Création artisanale Traiteur Toutou avec pépites de chocolat fondantes et fleur de sel"
                   className="w-full h-[420px] sm:h-[480px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-chocolate/70 via-transparent to-transparent" />
